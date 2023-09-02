@@ -1,4 +1,4 @@
-10 trial
+10 trials
 Runtime: 71(87.78%)-84(50.48%) ms
 Memory: 6.2(79.43%)-6.6(9.82%) MB
 
