@@ -8,6 +8,8 @@ How to find the solution?
 First of all, negative number or 1 must be handled first.
 Then, if a number has only 2 or 3 or 5 to be the prime factors, how to find out?
 
+
+Solution: From Special to General
 For example: 180. 
 180 = 2*2*3*3*5. 
 
