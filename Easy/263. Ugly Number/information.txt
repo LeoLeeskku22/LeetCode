@@ -1,0 +1,18 @@
+5 trials
+Runtime: 0(100%)-4(24.68%) ms
+Memory: 5.4(62.34%)-5.8(14.56%) MB
+
+
+Problems:
+How to find the solution?
+First of all, negative number or 1 must be handled first.
+Then, if a number has only 2 or 3 or 5 to be the prime factors, how to find out?
+
+For example: 180. 
+180 = 2*2*3*3*5. 
+
+* You can find that "ugly number n" in this equation: 
+n = (2^a)*(3^b)*(5^c) (a,b,c are integer that bigger or equal than 0)
+
+So the definition of ugly number becomes: After this number has been divided by 2,3,5 for several times, the remaining number should be 1.
+
