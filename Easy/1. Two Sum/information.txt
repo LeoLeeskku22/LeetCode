@@ -1,0 +1,8 @@
+10 trial
+Runtime: 71(87.78%)-84(50.48%) ms
+Memory: 6.2(79.43%)-6.6(9.82%) MB
+
+Problems:
+1. Forget to add *returnSize = 2;  // This will lead error some time. But it will pass some time. If you add this line, it must be passed.
+
+2. Using "int ans[2];" instead of "int *ans = malloc(2*sizeof(int));"  // This will lead RUNTIME ERROR!!! 
