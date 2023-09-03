@@ -1,0 +1,45 @@
+5 trials
+Runtime: 0(100%)-3(26.93%) ms
+Memory: 5.3(99.21%)-5.6(29.99%) MB
+
+Problems:
+How to think of this problem?
+It's easy to think that: 
+f(n)=f(n-1)+f(n-2)
+Why is that? 
+Because if you want to move to the final place, you need to move 1 step or 2 steps.
+1 step: f(n-1) (1 step near the final)
+2 steps: f(n-2) (2 steps near the final)
+
+
+*** Wrong code ***
+However, if you use this code 
+int climbStairs(int n){
+    if(n == 1 || n == 0){
+        return 1;
+    }
+    return climbStairs(n-1)+climbStairs(n-2);
+}
+It will lead time limit exceeded obviously.
+
+The better way is to use an array to store each situation to avoid repeat operation.
+
+In this way, Time complexity is O(n) which is much better than the former code.
+
+*** Correct Code ***
+int climbStairs(int n){
+    if (n <= 1) {
+        return 1;
+    }
+    int ways[n + 1];
+
+    ways[0] = 1;
+    ways[1] = 1;
+    
+    for (int i = 2; i <= n; i++) {
+        ways[i] = ways[i - 1] + ways[i - 2];
+    }
+    
+    return ways[n];
+}
+
