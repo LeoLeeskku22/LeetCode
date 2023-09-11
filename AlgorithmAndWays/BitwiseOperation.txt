@@ -1,1 +1,5 @@
+136. Single Number(Easy)
+The answer use: "unique ^= nums[i];" to find the solution of the unique number.
+The core of it is the unique number only appears once and the other appears only twice.
+Remember: a^a = 0, 0^a = a, b^a^b = a^b^b = a^0 = a. So it is possible to use bitwise xor to solve this problem
 
