@@ -1,0 +1,47 @@
+5 trails
+Runtime: 72(72%)-78(45.13%) ms
+Memory: 15(66.86%)-15.2(18.75%) mb
+
+This question looks easy, but to get a great score needs some thought.
+
+Solution 1:  
+Runtime: 608 ms(5.15%) 
+Memory: 15.1 mb(35.14%)
+
+void moveZeroes(int* nums, int numsSize){
+    int i,j,k;
+    for(i = 0; i < numsSize-1; i++){
+        if(nums[i] == 0){
+            j = nums[i+1];
+            nums[i+1] = nums[i];
+            nums[i] = j;
+        }
+    }
+    for(i = 0; i < numsSize-1; i++){
+        if(nums[i] == 0 && nums[i+1] != 0){
+            moveZeroes(nums,numsSize);
+        }
+    }
+}
+
+This solution is quite easy to think about. The basic thoguht of it is check each 0 one by one.
+Because there is some 0 near each other, like 10011, you need to use moveZeroes again until there is no 0.
+This solution is bad obviously, so here is a better idea.
+
+Solution 2:
+void moveZeroes(int* nums, int numsSize){
+    int lastNonZeroFoundAt = 0,i;
+
+    for (i = 0; i < numsSize; i++) {
+        if (nums[i] != 0) {
+            nums[lastNonZeroFoundAt++] = nums[i];
+        }
+    }
+
+    for (i = lastNonZeroFoundAt; i < numsSize; i++) {
+        nums[i] = 0;
+    }
+}
+
+This solution is also not hard to think.
+Its thought is: transfer all the non-0s to the front of the array. Then set the left element to be 0.
