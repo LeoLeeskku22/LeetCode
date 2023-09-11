@@ -1,0 +1,8 @@
+5 trails
+Runtime: 11(88.89%)-16(47.76%) ms
+Memory: 7.1(50.43%)-7.4(5.94%) mb
+
+Solution:
+Because the unique number only appears once and the other numbers appear only twice.
+Using bitwise xor is a very good way to solve it.
+For more detailed information, go to AlgorithmAndWays directory.
